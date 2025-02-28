@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+      to bottom, 
+      #1ab65ef0 50%, 
+      #2ac678 50%
+    );
+    font-family: sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #bbebd375; /* Transparent background */
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #5553;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative; /* Added to allow absolute positioning of child elements */
+  }
+  
+  main form {
+    border: 1px solid #5553;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+  }
+  
+  main form input,
+  main form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+  }
+  
+  main form i {
+    opacity: 0.7;
+  }
+  
+  main .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent; /* Transparent background for the result */
+    position: relative; /* Added to ensure proper stacking context */
+  }
+  
+  main .result figure {
+    margin: 10px 0;
+  }
+  
+  main .result ul.weather-details {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  main .result ul.weather-details li {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: small;
+    /* Added background colors */
+    background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+  }
+  
+  /* Applying the specific colors */
+  main .result ul.weather-details li:nth-child(1) {
+    background-color: #f9e10c; /* Yellow for clouds */
+  }
+  
+  main .result ul.weather-details li:nth-child(2) {
+    background-color: #b56291; /* Pink for humidity */
+  }
+  
+  main .result ul.weather-details li:nth-child(3) {
+    background-color: #48567b; /* Navy blue for pressure */
+  }
+  
+  main li:nth-child(4) {
+    background-color: #143695;
+  }
+  
+  main li:nth-child(5) {
+    background-color: #a55d04e8;
+  }
+  
+  .main-container {
+    display: flex;
+    gap: 20px; /* Adjust the gap between the two sections */
+  }
+  
+  .main-container div {
+    flex: 1; /* Make the two sections take up equal space */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #slide1,
+  #slide2 {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  #nextSlide,
+  #prevSlide {
+    position: absolute; /* Changed to absolute */
+    bottom: 10px; /* Slightly above the bottom */
+    right: 10px; /* Positioned to the right */
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure it appears on top */
+  }
+  
+  .report {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .hour,
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  /* Aligning the spaces between map, temperature, and description */
+  main .temperature,
+  main .description {
+    margin: 10px 0; /* Evenly spaces the elements */
+    text-align: center; /* Center align text within these elements */
+  }
+  
